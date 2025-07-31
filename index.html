@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+
+<html><!--  HyperText Markup Language -->
+
+    <head> <!--  "head" é aonde vai as informações importantes, como configurações e titulo que aparece na janela (metadados)-->
+        <title>site em html</title> <!-- "title" é o titulo da página, oque aprece na página-->
+        <link rel="stylesheet" href="style.css">
+    </head>
+    
+    <body><!-- "body" é aonde vai as informações visuais do site (operado por markups)-->
+        <header><!-- "header" (cabeçalho) serve para identação do código, importante e é uma boa pratica-->
+            <!-- "section" (secção) serve para identação do código -->
+            <section> <!-- Secção: Textos-->
+                <h1>Titulo principal do site (&lth1&gt)</h1><!-- "h1" é um markup para titulo (utiliza somente 1 por site) -->
+                <h2>Subtitulo posicionado abaixo do titulo (&lth2&gt)</h2><!-- "h2" é outro titulo, com a metade do tamanho do h1 (existem também o h3, h4, h5...) -->   
+                <h3>Subtitulo posicionado abaixo do subtitulo (&lth3&gt)</h3>
+                <h4>Subtitulo posicionado abiaxo do subtitulo que esta psocionado abaixo do subtitulo (&lth4&gt)</h4><br>
+                <h2>Escrevendo parafragos e quebrando linhas</h2>
+                <p> no alto daquele cume, havia uma roseira, a rosa no cume bate....(paragrafo &ltp&gt)<br>...a rosa no cume cheira (quebra de linha após o &ltbr&gt)</p><!-- "p" é um markup para um paragrafo. "br" serve para a quebra de linha-->
+            </section>
+        </header>
+
+        <main><!-- "main" (conteúdo principal) serve para identação do código, importante e é uma boa pratica -->
+            
+            <!-- Tipos de Inputs-->
+            <section> <!-- Multiplas escolhas-->
+                <h2>Criando multiplas opções de escolha</h2>
+                <h3>(&ltinput type="radio"&gt)</h3>
+                    <form> <!-- "form" serve para identação do código, é uma boa pratica-->
+                        <!-- "input" é para indicar quais dados serão enseridos.-->
+                        <input type="radio" value="Seleção 1" id="s1" name="opcoes">
+                        <!-- "type" é o tipo do formulario, no caso "radio" é a bolinha de seleção
+                        "value" seria o conteúdo que está na pergunta
+                        "id" é a identificação utilizada posteriormente
+                        "name" é simplesmente a nomeação do input-->
+                        <label for="s1">Seleção 1</label> <!-- "label serve para imprimir o conteúdo após a bolinha, dentro do "for" é indicado o ID da pergunta-->
+                        <input type="radio" value="Seleção 2" id="s2" name="opcoes">
+                        <label for="s2">Seleção 2</label>
+                    </form>
+            </section>
+            <section> <!-- Caixa de texto-->
+                <h2>Criando caixa de texto</h2>
+                <h3>(&ltinput type="text"&gt)</h3>
+                <form>
+                    <input type="text" id="t1" name="texto" placeholder="Escreva alguma coisa"> <!-- Aqui é uma inserção do tipo "text" que também é acompanhada de um id e de um nome, "placeholder" serve para deixar aquela escrita translucida dentro da caixa de texto-->
+                </form>
+            </section>
+            <section> <!-- Caixa de senha-->
+                <h2>Criando caixa de senha segura</h2>
+                <h3>(&ltinput type="password"&gt)</h3>
+                <form>
+                    <input type="password" id="p1" name="senha" placeholder="Insira sua senha"> <!-- type tipo senha, considera uma senha "segura"-->
+                </form>
+            </section>
+            <section> <!-- Caixa de data-->
+                <h2>Criando caixa de data</h2>
+                <h3>(&ltinput type="date"&gt)</h3>
+                <form>
+                    <input type="date" id="d1" name="data">
+                </form>
+            </section>
+            <section> <!-- Multiplas seleções-->
+                <h2>Criando multiplas escolhas</h2>
+                <h3>(&ltinput type="checkbox"&gt)</h3>
+                <form>
+                    <input type="checkbox" id="m1" name="multiplas" value="Seleção 1">
+                    <label for="m1">Seleção 1</label>
+                    <input type="checkbox" id="m2" name="multiplas" value="Seleção 2">
+                    <label for="m1">Seleção 2</label>
+                </form>
+            </section>
+            <section> <!-- Upload de arquivos-->
+                <h2>Caixa de upload de arquivos</h2>
+                <h3>(&ltinput type="file"&gt)</h3>
+                <form>
+                    <input type="file" id="f1" name="arquivo">
+                </form>
+            </section>
+            <section> <!-- Menu Suspenso-->
+                <h2>Caixa menu suspenso</h2>
+                <h3>(&ltselect&gt e &ltoptions&gt)</h3>
+                <form>
+                    <select name="suspenso" id="ms1"> <!-- "selec" serve pra criar uma caixa do tipo menu suspenso-->            
+                    <option value="Suspenso 1">Suspenso 1</option> <!-- "option" é a opção que sera exibida dentro do menu suspenso-->
+                    <option value="Suspenso 2">Suspenso 2</option>
+                    <option value="Suspenso 3">Suspenso 3</option>
+                    </select>
+                </form>
+            </section>
+            <section> <!-- Adicionando Imagens-->
+                <h2>Adicionando imagens</h2>
+                <h3>(&ltimg&gt)</h3>
+                <form>
+                    <figure> <!-- "figure" (figura) serve para identação do código-->
+                        <img src="./assets/dia1html.png" alt="Imagem de exemplo"><!--
+                        "img" serve para adicionar imagens
+                        "src" é o diretorio da imagem, pode ser um url ou uma imagem que está dentro da pasta do código
+                        "alt" é mensagem de erro caso a imagem não processe corretamente 
+                        obs: caso a imagem esteja dentro de uma pasta, para acessa-las é usado a seguinte formatação: ./nomedapasta/arquivo.formato -->
+                        <figcaption>texto exemplo (&ltfigcaption&gt)</figcaption> <!-- "figcaption" serve para adicionar um pequeno texto em baixo da imagem-->
+                    </figure> 
+                </form>
+            </section>
+            <section> <!-- Tabelas-->
+                <h2>Tabela exemplo</h2>
+                <h3>(&lttable&gt)</h3>
+                <table border="1"> <!-- "table" serve para criação de tabelas, "border" é para adicionar uma borda simples a tabela-->
+                    <thead> <!-- "thead" serve pra identação, inica a cabeça da tabela-->
+                        <tr> 
+                            <th>Linhas</th> <!-- "th" serve pra adicionar linhas exclusivamente na cabeça da tabela-->
+                            <th colspan="3">Argumentos</th> <!-- "colspan" serve pra indicar a quantidade de colunas que vai ocupar-->
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr> <!--"tr" é o indicador de LINHAS da tabela-->
+                            <td>Linha 1</td> <!--"td" é o indicador de COLUNAS da tabela-->
+                            <td>Argumento 1</td>
+                            <td>Argumento 2</td>
+                            <td>Argumento 3</td>
+                        </tr>
+                        <tr>
+                            <td>Linha 2</td>
+                            <td>Argumento 1</td>
+                            <td>Argumento 2</td>
+                        </tr>
+                        <tr>
+                            <td>Linha 3</td>
+                            <td>Argumento 1</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="4"><br></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </section>
+            <section> <!-- Listas -->
+                <h2>Criando exemplo de lista</h2>
+                <h3>listas comuns (&ltul&gt)</h3>
+                <ul> <!-- "ul" cria uma lista comum, com bolinhas-->
+                    <li>aaa</li> <!--"li" serve pra adicionar um elemento na lista-->
+                    <li>bbb</li>
+                    <li>ccc</li>
+                </ul>
+                <h3>listas numeradas(&ltol&gt)</h3>
+                <ol> <!-- "ol" cria uma lista numerada-->
+                    <li>numero um</li>
+                    <li>numero dois</li>
+                    <li>numero três</li>
+                </ol>
+            </section>
+            <section> <!-- Details -->
+                <h2>Exemplo &ltdetails&gt e &ltsummary&gt</h2>
+                <details> <!-- "details" esconde o conteúdo que tem dentro dele e aparece somente quando o usuario aperta em cima-->
+                    <summary>Clique aqui para ver nada</summary> <!-- "summary" é o texto que aparece pro usuario interagir pra exibir o conteúdo-->
+                    <h2>Nada</h2>
+                </details>
+            </section>
+            <section> <!-- textarea e fieldset -->
+                <h2>Exemplo de caixa de texto grande</h2>
+                <h3>(&lttextarea&gt)</h3>
+                <form>
+                    <fieldset> <!-- "fieldset" cria um limite em torno doque está englobando-->
+                        <legend>Texto grande (&ltlegend&gt)</legend> <!-- "legend" um texto que fica entre a linha do fieldset-->
+                        <textarea name="texto" id="texto" rows="5" cols="250"></textarea> <!--"textarea" serve pra criar uma area pra inrir o texto
+                        o tamanho é demilitado pelo rows(linhas) e cols(colunas) (são medidas por caracteres)-->
+                    </fieldset>
+                </form>
+            </section>
+            <section> <!-- redirect (ancoras)-->
+                <h2>Exemplo de redirect (&lta&gt)</h2>
+                <a href="./assets/images.jpg">Aperte aqui pra surpresinha rs</a> <!-- "a" (anchor) serve pra criar um texto interativo que redireciona pro link dentro  do "href"-->
+            </section>
+            <section> <!-- botão-->
+                <h2>Exemplo botão (&ltbutton&gt)</h2>
+                <button>Botão incrivelmente foda</button> <!-- "button" cria um botão -->
+            </section>
+        </main>
+
+        <footer>
+            <p>Escrevendo um monte de coisa aqui, se alguém parar para ler vai perceber que realmente não importa muito, na verdade eu só to escrevendo tudo isso aqui porque está localizado no footer do meu site e eu não queria deixar ele vazio &copy</p>
+        </footer>
+    </body>
+</html>
